@@ -1,24 +1,18 @@
 package sgp.web;
 
 
+import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import java.io.IOException;
+import java.util.Arrays;
 
 public class ListerCollaborateursController extends HttpServlet {
 
     @Override
-    public void doGet(HttpServletRequest req, HttpServletResponse rep) throws IOException {
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
-        String avecPhotoParam = req.getParameter("avecPhoto");
+        req.setAttribute("listeNoms", Arrays.asList("Bob", "Alfred", "Jean"));
 
-        String departementParam = req.getParameter("departement");
-
-        rep.setContentType("text/html");
-
-        rep.getWriter().print("<h1>Liste des collaborateurs</h1>"
-        + "<ul>"
-        + "<li>avecPhoto = " + avecPhotoParam + "</li>"
-        + "<li>departement = " + departementParam + "</li>"
-        +"</ul>");
+        req.getRequestDispatcher("/WEB-INF/views/collab/listerCollaborateurs.jsp").forward(req, resp);
     }
 }
