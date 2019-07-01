@@ -1,4 +1,4 @@
-package tp1.web;
+package sgp.web;
 
 
 import javax.servlet.http.*;

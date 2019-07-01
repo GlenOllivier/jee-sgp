@@ -1,4 +1,4 @@
-package tp1.web;
+package sgp.web;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -25,13 +25,15 @@ public class EditerCollaborateursController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse rep) throws ServletException, IOException {
 
-        String matricule = req.getHeader("matricule");
-        String titre = req.getHeader("titre");
-        String nom = req.getHeader("nom");
-        String prenom = req.getHeader("prenom");
+        String matricule = req.getParameter("matricule");
+        String titre = req.getParameter("titre");
+        String nom = req.getParameter("nom");
+        String prenom = req.getParameter("prenom");
 
-
-        if(matricule == null || titre == null || nom == null || prenom == null) {
+        if(matricule == null || "".equals(matricule)
+                || titre == null || "".equals(titre)
+                || nom == null || "".equals(nom)
+                || prenom == null || "".equals(prenom)) {
             rep.setStatus(400);
             rep.getWriter().print("Les parametres sont incorrects");
         } else {

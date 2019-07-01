@@ -7,13 +7,13 @@
 
   <servlet>
     <servlet-name>ListerCollaborateursController</servlet-name>
-    <servlet-class>tp1.web.ListerCollaborateursController</servlet-class>
+    <servlet-class>sgp.web.ListerCollaborateursController</servlet-class>
   </servlet>
 
 
   <servlet>
     <servlet-name>EditerCollaborateursController</servlet-name>
-    <servlet-class>tp1.web.EditerCollaborateursController</servlet-class>
+    <servlet-class>sgp.web.EditerCollaborateursController</servlet-class>
   </servlet>
 
   <servlet-mapping>
