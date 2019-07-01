@@ -10,6 +10,11 @@
     <servlet-class>sgp.web.ListerCollaborateursController</servlet-class>
   </servlet>
 
+  <servlet-mapping>
+    <servlet-name>ListerCollaborateursController</servlet-name>
+    <url-pattern>/collaborateurs/lister</url-pattern>
+  </servlet-mapping>
+
 
   <servlet>
     <servlet-name>EditerCollaborateursController</servlet-name>
@@ -21,10 +26,14 @@
     <url-pattern>/collaborateurs/editer</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>AjouterCollaborateursController</servlet-name>
+    <servlet-class>sgp.web.AjouterCollaborateursController</servlet-class>
+  </servlet>
 
   <servlet-mapping>
-    <servlet-name>ListerCollaborateursController</servlet-name>
-    <url-pattern>/collaborateurs/lister</url-pattern>
+    <servlet-name>AjouterCollaborateursController</servlet-name>
+    <url-pattern>/collaborateurs/ajouter</url-pattern>
   </servlet-mapping>
 
 </web-app>

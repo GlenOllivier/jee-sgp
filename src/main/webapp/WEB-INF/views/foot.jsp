@@ -1,3 +1,4 @@
+<%@ page language="java" pageEncoding="utf-8" %>
   <footer>
     <div class="container">
       <p class="text-center">© 2019 Glen OLLIVIER</p>
