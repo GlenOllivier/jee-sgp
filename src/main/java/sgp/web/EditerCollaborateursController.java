@@ -13,12 +13,12 @@ public class EditerCollaborateursController extends HttpServlet {
 
         rep.setContentType("text/html");
 
-        if(matricule == null) {
+        if(matricule == null || "".equals(matricule)) {
             rep.setStatus(400);
             rep.getWriter().print("<p>Erreur : un matricule est attendu.</p>");
         } else {
             rep.getWriter().print("<h1>Edition de collaborateur</h1>"
-            + "Matricule : " + matricule);
+            + "<p>Matricule : " + matricule + "</p>");
         }
     }
 
