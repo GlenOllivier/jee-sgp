@@ -38,9 +38,9 @@
         </div>
 
         <div class="form-group row">
-          <label for="social-number" class="col-sm-3 col-form-label text-right">Numéro de sécurité sociale</label>
+          <label for="security-number" class="col-sm-3 col-form-label text-right">Numéro de sécurité sociale</label>
           <div class="col-sm-9">
-            <input type="" class="form-control" id="social-number" name="social-number" placeholder="" required="required">
+            <input type="" class="form-control" id="security-number" name="security-number" placeholder="" required="required">
           </div>
         </div>
 
