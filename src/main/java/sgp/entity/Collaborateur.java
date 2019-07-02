@@ -19,6 +19,12 @@ public class Collaborateur {
     private Departement departement;
     private String phoneNumber;
 
+    private static int nextID = 1;
+
+    public Collaborateur() {
+        id = "M" + nextID++;
+    }
+
     public String getId() {
         return id;
     }

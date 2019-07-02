@@ -1,5 +1,8 @@
-<%@ page language="java" pageEncoding="utf-8" %>
+<%@ page language="java" pageEncoding="utf-8" isELIgnored="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%@ include file="../head.jsp" %>
+
 
 <section class="container-fluid">
 
@@ -8,7 +11,7 @@
     </div>
     <div class="container mb-4">
 
-      <form action="<%= request.getContextPath() %>/collaborateurs/ajouter" method="post">
+      <form action="<c:url value="/collaborateurs/ajouter"/>" method="post">
         <div class="form-group row">
           <label for="last-name" class="col-sm-3 col-form-label text-right">Nom : </label>
           <div class="col-sm-9">

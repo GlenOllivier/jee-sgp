@@ -1,4 +1,7 @@
-<%@ page language="java" pageEncoding="utf-8" %>
+<%@ page language="java" pageEncoding="utf-8" isELIgnored="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+
 <!doctype html>
 <html lang="fr">
 <head>
@@ -24,10 +27,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" href="<%= request.getContextPath() %>/collaborateurs/lister">Collaborateurs</a>
+          <a class="nav-link active" href="<c:url value="/collaborateurs/lister"/>">Collaborateurs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Statistiques</a>
+          <a class="nav-link" href="<c:url value="/stats/afficher"/>">Statistiques</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Activités</a>

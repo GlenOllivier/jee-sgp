@@ -5,6 +5,16 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
 
+  <filter>
+    <filter-name>FrequentationFilter</filter-name>
+    <filter-class>sgp.filter.FrequentationFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>FrequentationFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
   <servlet>
     <servlet-name>ListerCollaborateursController</servlet-name>
     <servlet-class>sgp.web.ListerCollaborateursController</servlet-class>
@@ -13,6 +23,16 @@
   <servlet-mapping>
     <servlet-name>ListerCollaborateursController</servlet-name>
     <url-pattern>/collaborateurs/lister</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>AfficherStatsController</servlet-name>
+    <servlet-class>sgp.web.AfficherStatsController</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>AfficherStatsController</servlet-name>
+    <url-pattern>/stats/afficher</url-pattern>
   </servlet-mapping>
 
 
