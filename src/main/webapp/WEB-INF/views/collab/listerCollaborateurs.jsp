@@ -1,5 +1,6 @@
 <%@ page import="java.util.List" %>
 <%@ page import="sgp.entity.Collaborateur" %>
+<%@ page import="sgp.entity.Departement" %>
 
 <%@ page language="java" pageEncoding="utf-8" %>
 <%@ include file="../head.jsp" %>
@@ -35,9 +36,15 @@
           <label class="col-sm-4 col-form-label text-right" for="departement">Filtrer par département :</label>
           <select class="form-control col-sm-2" name="departement" >
             <option selected="selected">Tous</option>
-            <option>Comptabilité</option>
-            <option>Ressources Humaines</option>
-            <option>Informatique</option>
+            <%
+            List<Departement> listeDepartements = (List<Departement>) request.getAttribute("listeDepartements");
+
+            for (Departement d : listeDepartements) {
+            %>
+            <option><%= d.getName() %></option>
+            <%
+            }
+            %>
           </select>
         </div>
 
@@ -65,14 +72,14 @@
                 </div>
                 <div class="col-sm-8">
                   <dl class="row">
-                    <dt class="col-sm-5">Adresse</dt>
-                    <dd class="col-sm-7"><%= c.getAddress() %></dd>
-                    <dt class="col-sm-5">Numéro de sécu</dt>
-                    <dd class="col-sm-7"><%= c.getSecurityNumber() %></dd>
+                    <dt class="col-sm-5">Fonction</dt>
+                    <dd class="col-sm-7"><%= c.getIntitulePoste() %></dd>
+                    <dt class="col-sm-5">Département</dt>
+                    <dd class="col-sm-7"><%= c.getDepartement() %></dd>
                     <dt class="col-sm-5">Email</dt>
                     <dd class="col-sm-7"><%= c.getProEmail() %></dd>
-                    <dt class="col-sm-5">Date de naissance</dt>
-                    <dd class="col-sm-7"><%= c.getBirthDate() %></dd>
+                    <dt class="col-sm-5">Téléphone</dt>
+                    <dd class="col-sm-7"><%= c.getPhoneNumber() %></dd>
                   </dl>
                   <a href="#" class="btn btn-dark text-right"> Modifier </a>
                 </div>

@@ -15,6 +15,9 @@ public class Collaborateur {
     private String photo;
     private ZonedDateTime creationDateTime;
     private boolean active;
+    private String intitulePoste;
+    private Departement departement;
+    private String phoneNumber;
 
     public String getId() {
         return id;
@@ -94,6 +97,30 @@ public class Collaborateur {
 
     public void setActive(boolean active) {
         this.active = active;
+    }
+
+    public String getIntitulePoste() {
+        return intitulePoste;
+    }
+
+    public void setIntitulePoste(String intitulePoste) {
+        this.intitulePoste = intitulePoste;
+    }
+
+    public Departement getDepartement() {
+        return departement;
+    }
+
+    public void setDepartement(Departement departement) {
+        this.departement = departement;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     @Override
