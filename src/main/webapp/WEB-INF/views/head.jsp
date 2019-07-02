@@ -24,7 +24,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Collaborateurs</a>
+          <a class="nav-link active" href="<%= request.getContextPath() %>/collaborateurs/lister">Collaborateurs</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Statistiques</a>

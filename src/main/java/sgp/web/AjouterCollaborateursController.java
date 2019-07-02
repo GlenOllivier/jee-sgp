@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeParseException;
 
 public class AjouterCollaborateursController extends HttpServlet {
@@ -47,6 +48,7 @@ public class AjouterCollaborateursController extends HttpServlet {
             c.setFirstName(firstName);
             c.setLastName(lastName);
             c.setSecurityNumber(securityNumber);
+            c.setCreationDateTime(ZonedDateTime.now());
             Constantes.COLLAB_SERVICE.sauvegarderCollaborateur(c);
 
             resp.sendRedirect(req.getContextPath() + "/collaborateurs/lister");

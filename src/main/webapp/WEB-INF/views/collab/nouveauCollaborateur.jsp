@@ -17,7 +17,7 @@
         </div>
 
         <div class="form-group row">
-          <label for="first-name" class="col-sm-3 col-form-label text-right">Prenom : </label>
+          <label for="first-name" class="col-sm-3 col-form-label text-right">Prénom : </label>
           <div class="col-sm-9">
             <input type="text" class="form-control" id="first-name" name="first-name" placeholder="Prenom..." required="required">
           </div>
